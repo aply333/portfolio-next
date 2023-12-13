@@ -1,0 +1,8 @@
+.outline-over-light{
+  transition: var(--time-base);
+  outline: 2px solid transparent;
+  &:focus-visible{
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}

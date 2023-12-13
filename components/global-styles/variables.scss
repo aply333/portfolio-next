@@ -1,0 +1,36 @@
+$colors : (
+        "accent"      : #FF6D00,
+        "alt1-accent" : #FF8500,
+        "alt2-accent" : #FF9E00,
+  // __ Core
+        "brighter"  : #0466C8,
+        "bright"    : #0353A4,
+        "core"      : #023E7D,
+        "dark"      : #002855,
+        "darker"    : #001845,
+        "darkest"   : #001233,
+  //  __ Greys
+        "grey-lightest" : #979DAC,
+        "grey-lighter"  : #7D8597,
+        "grey"          : #5C677D,
+        "dark-grey"     : #33415C,
+  // __Norms
+        'white' : #FFFFFF,
+        'black' : #000000
+);
+
+$radius : (
+  small: 8px,
+  hard: 12px,
+  hardest: 60px
+);
+
+:root{
+  @each $name, $hex in $colors{
+    --color-#{$name}: #{$hex};
+  }
+  @each $name, $hex in $radius{
+    --rad-#{$name}: #{$hex};
+  }
+  --time-base: all ease 250ms;
+}
