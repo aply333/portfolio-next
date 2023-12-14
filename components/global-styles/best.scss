@@ -1,3 +1,8 @@
-@use 'variables';
+@use './variables';
 @use './layouts';
 @use './breakpoints';
+@use './font';
+
+* {
+  box-sizing: border-box;
+}

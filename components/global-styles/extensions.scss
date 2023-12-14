@@ -6,3 +6,12 @@
     outline-offset: 3px;
   }
 }
+
+.stack-list{
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  max-height: 150px;
+  list-style: none;
+  padding: 0;
+}

@@ -1,0 +1,17 @@
+@use '../../global-styles/extensions';
+@use '../../global-styles/breakpoints';
+
+.title{
+  grid-column: 1/-1;
+}
+.list{
+  @extend .stack-list;
+  grid-column: 1/-1;
+}
+
+@include breakpoints.size(md){
+  .title,
+  .list{
+    grid-column: 3/9 ;
+  }
+}

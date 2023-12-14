@@ -1,7 +1,7 @@
-import { Inter } from 'next/font/google'
+import { Noto_Sans_Mono} from 'next/font/google'
 import '../components/global-styles/best.scss';
 
-const inter = Inter({ subsets: ['latin'] })
+const sans = Noto_Sans_Mono({ subsets: ['latin'] })
 
 export const metadata = {
   title: "Hi, I'm Andrei.",
@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={sans.className}>{children}</body>
     </html>
   )
 }

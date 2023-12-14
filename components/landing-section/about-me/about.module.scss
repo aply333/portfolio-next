@@ -1,0 +1,18 @@
+@use '../../global-styles/breakpoints';
+
+.content{
+  grid-column: 1/-1;
+}
+.title{}
+.paragraph{}
+
+@include breakpoints.size(md){
+  .content{
+    grid-column: 5/11;
+  }
+}
+@include breakpoints.size(lg){
+  .content{
+    grid-column: 9/15;
+  }
+}

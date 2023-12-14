@@ -1,6 +1,11 @@
 @use '../global-styles/extensions';
+@use '../global-styles/breakpoints';
 
-.header{}
+.header{
+  width: 300px;
+  right: 300px;
+  position: fixed;
+}
 .nav{
   display: flex;
   flex-flow: row nowrap;

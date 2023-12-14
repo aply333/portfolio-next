@@ -1,0 +1,33 @@
+@use '../../global-styles/breakpoints';
+
+.heading-text{
+  grid-column: 1/-1;
+}
+.headshot{
+  grid-column: 2/7;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+@include breakpoints.size(md){
+  .intro{
+    padding-top: 10%;
+    padding-bottom: 15%;
+  }
+  .heading-text{
+    grid-column: 2/6;
+  }
+  .headshot{
+    grid-column: 7/10;
+    grid-row: span 2;
+  }
+}
+
+@include breakpoints.size(lg){
+  .heading-text{
+    grid-column: 4/8;
+  }
+  .headshot{
+    grid-column: 10/14;
+  }
+}
