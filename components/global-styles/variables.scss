@@ -25,12 +25,34 @@ $radius : (
   hardest: 60px
 );
 
+$levels : (
+// Sub-Content
+  sub-1 : -1,
+  sub-2 : -2,
+  sub-3 : -3,
+  sub-4 : -4,
+  sub-5 : -5,
+// Content
+  cont-1 : 0,
+  cont-3 : 1,
+  content: 3,
+// Top-Content
+  top-1 : 4,
+  top-2 : 5,
+  top-3 : 6
+);
+
 :root{
   @each $name, $hex in $colors{
     --color-#{$name}: #{$hex};
   }
-  @each $name, $hex in $radius{
-    --rad-#{$name}: #{$hex};
+  @each $name, $rad in $radius{
+    --rad-#{$name}: #{$rad};
   }
+  @each $name, $lvl in $levels{
+    --level-#{$name}: #{$lvl};
+  }
+  --grad-white: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
   --time-base: all ease 250ms;
+  --box-shadow: 7px 6px 35px -16px rgba(0,0,0,0.61);
 }

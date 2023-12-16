@@ -3,14 +3,14 @@ import styles from './contact.module.scss';
 export default function Contact(){
   return(
     <section className={"section--with-grid"}>
-      <h2 className={styles.title}>Let's Talk</h2>
+      <h2 className={'section-title '+styles.title}>Let's Talk</h2>
       <div className={styles.text}>
 
         <div className={styles.excerpts}>
-          <p className={styles.line}>
+          <p className={'paragraph-gap '+styles.line}>
             Please reach out, I'd love to hear what I could do for you. I've left my phone and email bellow, or if you'd like you can messege me directly with the form to the right.
           </p>
-          <p className={styles.line}>
+          <p className={'paragraph-gap '+styles.line}>
             I'm local to the San Francisco Bay Area; open to remote work or relocating if needed.
           </p>
         </div>

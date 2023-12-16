@@ -3,14 +3,43 @@
 .heading-text{
   grid-column: 1/-1;
 }
+.subheading{
+  margin-bottom: 20px;
+}
 .headshot{
   grid-column: 2/7;
   width: 100%;
   aspect-ratio: 1/1;
+  grid-row: span 2;
 }
+
+.intro{
+  padding-top: 20%;
+  position: relative;
+}
+.intro_abstract{
+  grid-column: 1/-1;
+  @include breakpoints.size(md){
+    grid-column: 2/6;
+  }
+  @include breakpoints.size(lg){
+    grid-column: 4/10;
+  }
+}
+
+.abstract{
+  position: absolute;
+  width: 800px;
+  right: -250px;
+  rotate: -25deg;
+  top: -300px;
+  z-index: var(--level-sub-5);
+}
+
 
 @include breakpoints.size(md){
   .intro{
+    align-items: center;
     padding-top: 10%;
     padding-bottom: 15%;
   }
@@ -19,13 +48,12 @@
   }
   .headshot{
     grid-column: 7/10;
-    grid-row: span 2;
   }
 }
 
 @include breakpoints.size(lg){
   .heading-text{
-    grid-column: 4/8;
+    grid-column: 4/9;
   }
   .headshot{
     grid-column: 10/14;

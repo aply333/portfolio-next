@@ -2,15 +2,34 @@
 @use '../global-styles/breakpoints';
 
 .header{
-  width: 300px;
-  right: 300px;
+  width: 100%;
   position: fixed;
+  top: 0;
+  left:50%;
+  transform: translateX(-50%);
+  padding: 30px 20px 15px 20px;
+  z-index: var(--level-top-1);
+  background-color: var(--color-white);
+  max-width: 1360px;
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    width: 100%;
+    height: 60px;
+    background: var(--grad-white);
+    pointer-events: none;
+  }
 }
 .nav{
   display: flex;
   flex-flow: row nowrap;
   justify-content: end;
   width: 100%;
+  @include breakpoints.size(md){
+    width: 300px;
+    float: right;
+  }
 }
 .menu-item{
   @extend .outline-over-light;
@@ -19,9 +38,13 @@
   padding: 10px;
   border-radius: var(--rad-small);
   svg{
+    transition: var(--time-base);
     width: 24px;
     height: 24px;
     fill: var(--color-dark-grey);
+  }
+  &:focus, &:hover{
+    svg{ fill: var(--color-accent);}
   }
   &--contact{
     @extend .outline-over-light;
@@ -34,9 +57,9 @@
     color: var(--color-white);
     text-decoration: none;
     transition: var(--time-base);
+    font-weight: 600;
     &:hover, &:focus {
-      background-color: var(--color-accent);
-      color: var(--color-dark-grey);
+      background-color: var(--color-bright);
     }
   }
 }

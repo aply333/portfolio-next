@@ -3,12 +3,12 @@
 .container{
   position: relative;
   margin: auto auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   max-width: 100%;
   @include breakpoints.size(lg){
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
     max-width: 1440px;
   }
 }
@@ -28,14 +28,14 @@
   &--with-grid{
     @extend .section;
     display: grid;
-    grid-template-columns: repeat(6, calc( calc(100% / 6) - 20px));
-    grid-column-gap: 20px;
+    grid-template-columns: repeat(6, calc( 100% / 6));
+    //grid-column-gap: 20px;
     @include breakpoints.size(md){
-      grid-template-columns: repeat(10, calc( calc(100% / 10) - 40px));
-      grid-column-gap: 40px;
+      grid-template-columns: repeat(10, calc( 100% / 10));
+      //grid-column-gap: 40px;
     }
     @include breakpoints.size(lg) {
-      grid-template-columns: repeat(16, calc(calc(100% / 16) - 40px));
+      grid-template-columns: repeat(16, calc(100% / 16) );
     }
   }
 }
@@ -43,13 +43,15 @@
 
 .just-grid{
   display: grid;
-  grid-template-columns: repeat(6, calc( calc(100% / 6) - 20px));
+  //grid-template-columns: repeat(6, calc( 100% / 6));
+  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 20px;
   @include breakpoints.size(md){
-    grid-template-columns: repeat(10, calc( calc(100% / 10) - 40px));
+    //grid-template-columns: repeat(10, calc( 100% / 10));
+    grid-template-columns: repeat(10, 1fr);
     grid-column-gap: 40px;
   }
   @include breakpoints.size(lg) {
-    grid-template-columns: repeat(16, calc(calc(100% / 16) - 40px));
+    grid-template-columns: repeat(16, 1fr);
   }
 }

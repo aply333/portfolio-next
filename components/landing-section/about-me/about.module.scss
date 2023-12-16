@@ -1,10 +1,21 @@
 @use '../../global-styles/breakpoints';
 
+.about{
+  align-items: center;
+}
 .content{
   grid-column: 1/-1;
 }
 .title{}
 .paragraph{}
+
+.abstract_wrapper{
+  grid-column: span 4;
+}
+.abstract_content{
+  scale: 1.1;
+  transform: translateX(-20px);
+}
 
 @include breakpoints.size(md){
   .content{
@@ -12,6 +23,9 @@
   }
 }
 @include breakpoints.size(lg){
+  .abstract_wrapper{
+    grid-column: span 7;
+  }
   .content{
     grid-column: 9/15;
   }

@@ -11,7 +11,10 @@
   display: flex;
   flex-flow: column wrap;
   align-content: space-between;
-  max-height: 150px;
+  max-height: 200px;
   list-style: none;
   padding: 0;
+  li{
+    margin-bottom: 1.4rem;
+  }
 }

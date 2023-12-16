@@ -3,7 +3,7 @@ import styles from "./stack.module.scss";
 export default function Stack(){
   return(
     <section className="section--with-grid">
-      <h2 className={styles.title}>My Stack</h2>
+      <h2 className={'section-title '+styles.title}>My Stack</h2>
       <ul className={styles.list}>
         <li className={styles.item}>HTML</li>
         <li className={styles.item}>CSS</li>
