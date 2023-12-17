@@ -54,5 +54,6 @@ $levels : (
   }
   --grad-white: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
   --time-base: all ease 250ms;
-  --box-shadow: 7px 6px 35px -16px rgba(0,0,0,0.61);
+  //--box-shadow: 7px 6px 35px -16px rgba(0,0,0,0.61);
+  --box-shadow: 5px 5px 60px -35px rgba(0,0,0,0.75);
 }

@@ -8,7 +8,7 @@
   left:50%;
   transform: translateX(-50%);
   padding: 30px 20px 15px 20px;
-  z-index: var(--level-top-1);
+  z-index: var(--level-cont-3);
   background-color: var(--color-white);
   max-width: 1360px;
   &::after{
@@ -39,9 +39,9 @@
   border-radius: var(--rad-small);
   svg{
     transition: var(--time-base);
+    fill: var(--color-dark-grey);
     width: 24px;
     height: 24px;
-    fill: var(--color-dark-grey);
   }
   &:focus, &:hover{
     svg{ fill: var(--color-accent);}

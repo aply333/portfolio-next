@@ -2,12 +2,16 @@
 @use '../../global-styles/extensions';
 
 // Project Mutations
-
 .projects{
   gap: 10px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   position: relative;
+  height: 70vh;
+  margin-top: 0;
+  padding-top: 90px;
+
   @include breakpoints.size(md){
+    padding-top: 0;
     grid-template-columns: repeat(10, minmax(0, 1fr) );
   }
 }
@@ -16,13 +20,28 @@
 
 .card{
   background-color: var(--color-white);
+  border: none;
+  height: 100%;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--rad-small);
+  transition: scale ease-in-out 250ms;
+  max-height: 100px;
+  &__image_wrapper{
+    width: 100%;
+    height: 100%;
+  }
+  &__image{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
 
-  border: 1px solid grey;
+  &:focus-visible{
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
 
-  height: 100px;
-
-  //TODO: Temp - Remove with functionality.
-  opacity: 0;
 
   &__one{ grid-column: 1/3; }
   &__two{ grid-column: 3/6; }
@@ -35,7 +54,7 @@
   &__nine{ grid-column: span 5; }
 
   @include breakpoints.size(md){
-    height: 200px;
+    max-height: 200px;
     &__one{ grid-column: 1/3; }
     &__two{ grid-column: 3/7; }
     &__three{ grid-column: 7/11; }
@@ -45,16 +64,67 @@
     &__seven{ grid-column: 1/3; }
     &__eight{ grid-column: 3/7; }
     &__nine{ grid-column: 7/11; }
+
+    &:hover, &:focus{
+      scale: 1.1;
+    }
   }
   @include breakpoints.size(lg){
-    height: 250px;
+    max-height: 250px;
   }
 }
 
 // * About Modal Styles
 .about_project{
   position: absolute;
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  max-height: 100%;
+  left: 50%;
+  top: 80px;
+  transform: translateX(-50%);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--rad-small);
+  padding: 20px;
+  z-index: var(--level-top-2);
+
+  &__top_row{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    button{
+      all: unset;
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-content: center;
+      svg{
+        stroke: var(--color-darker);
+      }
+    }
+  }
+  &__image{
+    height: 160px;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    margin-bottom: 20px;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  &__content{
+    padding: 10px;
+  }
 }
 .list{
-  @extend .stack-list;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  li{
+    margin-right: 1rem;
+  }
 }

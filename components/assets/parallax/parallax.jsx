@@ -25,11 +25,11 @@ function Section({childElement}){
 
 export default function Parallax() {
 
-  const { scrollY } = useScroll();
-  useMotionValueEvent(scrollY, "change", (latest)=>{
-    console.log("Page scroll: ", latest);
-    console.log("scrollY ", scrollY)
-  })
+  // const { scrollY } = useScroll();
+  // useMotionValueEvent(scrollY, "change", (latest)=>{
+  //   console.log("Page scroll: ", latest);
+  //   console.log("scrollY ", scrollY)
+  // })
 
   return (
     <>
