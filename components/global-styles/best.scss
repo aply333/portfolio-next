@@ -9,5 +9,5 @@
 }
 html {
   font-size: 10px;
-  overflow-x: clip;
+  scroll-snap-type: y mandatory;
 }

@@ -7,19 +7,15 @@ export default function IntroAbstract({parent_class}){
   let animations = {
     one: {
       width: "100%",
-      // opacity: 1,
     },
     two: {
       width: "80%",
-      // opacity: 1,
     },
     three: {
       width: "60%",
-      // opacity: 1,
     },
     four: {
       width: "40%",
-      // opacity: 1,
     }
   }
 
