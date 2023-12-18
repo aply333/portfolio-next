@@ -6,9 +6,7 @@
   gap: 10px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   position: relative;
-  height: 70vh;
-  margin-top: 0;
-  padding-top: 90px;
+  height: 60vh;
 
   @include breakpoints.size(md){
     padding-top: 0;
@@ -69,21 +67,12 @@
       scale: 1.1;
     }
   }
-  @include breakpoints.size(lg){
-    max-height: 250px;
-  }
 }
 
 // * About Modal Styles
 .about_project{
-  position: absolute;
+  grid-column: 1/6;
   width: 100%;
-  max-width: 600px;
-  height: 100vh;
-  max-height: 100%;
-  left: 50%;
-  top: 80px;
-  transform: translateX(-50%);
   box-shadow: var(--box-shadow);
   border-radius: var(--rad-small);
   padding: 20px;

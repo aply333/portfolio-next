@@ -1,6 +1,9 @@
 "use client";
 import styles from "./projects.module.scss";
+
 import tempImage from "../../../public/focusedKanban.jpg";
+import linea from "../../../public/linea.png";
+
 import Image from "next/image";
 import { useState } from "react";
 import Svg from "@/components/assets/svg/svg";
@@ -8,7 +11,7 @@ import {AnimatePresence, motion} from "framer-motion";
 
 export default function Projects(){
 
-  console.log(tempImage);
+  // console.log(tempImage);
 
   const [modalOpen, setModalOpen] = useState(false);
   const [content, setContent] = useState({})
