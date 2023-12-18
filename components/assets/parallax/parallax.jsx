@@ -9,7 +9,6 @@ import Projects from "@/components/landing-section/projects/projects";
 
 
 function Section({childElement}){
-
   return(
     <div className={style.parallax_target}>
       <div className={style.inner_div}>
@@ -18,6 +17,7 @@ function Section({childElement}){
     </div>
   )
 }
+
 
 export default function Parallax({intro}) {
   console.log(intro)

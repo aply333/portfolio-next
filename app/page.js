@@ -1,15 +1,15 @@
 import Header from "@/components/header/header";
 import Parallax from "@/components/assets/parallax/parallax";
-import { getFrontPageIntro } from "@/lib/api/strapi";
-
+import { getLandingData } from "@/lib/api/strapi";
 export default async function Home() {
-  let intro_data = await getFrontPageIntro();
+  let landing_data = await getLandingData();
+  await console.log(landing_data)
 
   return (
     <>
     <Header/>
     <main className='container'>
-      <Parallax intro={intro}/>
+      <Parallax />
     </main>
     </>
   )
