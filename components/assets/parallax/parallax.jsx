@@ -1,12 +1,8 @@
 "use client";
 
-import{ useRef } from "react";
-import {motion, useScroll, useSpring, useTransform, MotionValue, useMotionValueEvent} from "framer-motion";
 import Intro from "@/components/landing-section/intro/intro";
 import About from "@/components/landing-section/about-me/about";
 import Stack from "@/components/landing-section/stack/stack";
-import Featured from "@/components/landing-section/featured/featured";
-import Gallery from "@/components/landing-section/gallery/gallery";
 import Contact from "@/components/landing-section/contact/contact";
 import style from "./parallax.module.scss";
 import Projects from "@/components/landing-section/projects/projects";
@@ -23,14 +19,8 @@ function Section({childElement}){
   )
 }
 
-export default function Parallax() {
-
-  // const { scrollY } = useScroll();
-  // useMotionValueEvent(scrollY, "change", (latest)=>{
-  //   console.log("Page scroll: ", latest);
-  //   console.log("scrollY ", scrollY)
-  // })
-
+export default function Parallax({intro}) {
+  console.log(intro)
   return (
     <>
       <Section childElement={<Intro/>}/>
