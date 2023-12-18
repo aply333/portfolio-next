@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+
+const DB_HOST = process.env.STRAPI_ROOT
+
+const nextConfig = {
+  images: {
+    domains: [ DB_HOST ]
+  }
+}
 
 module.exports = nextConfig
