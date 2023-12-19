@@ -8,7 +8,9 @@ import { useState } from "react";
 import Svg from "@/components/assets/svg/svg";
 import {AnimatePresence, motion} from "framer-motion";
 
-export default function Projects(){
+export default function Projects({data}){
+
+  console.log("#### LOG DATA PROJECT ###:  ",data.Projects.data)
 
   const [modalOpen, setModalOpen] = useState(false);
   const [content, setContent] = useState({})

@@ -4,7 +4,7 @@ const DB_HOST = process.env.STRAPI_ROOT
 
 const nextConfig = {
   images: {
-    domains: [ DB_HOST ]
+    domains: [ DB_HOST, 'localhost' ]
   }
 }
 

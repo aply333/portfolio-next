@@ -33,3 +33,7 @@ p, .basic{
 ul{
   li{ @extend .basic;}
 }
+
+.markdown-wys{
+  p{ @extend .paragraph-gap; }
+}

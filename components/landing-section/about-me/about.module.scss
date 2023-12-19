@@ -6,15 +6,28 @@
 .content{
   grid-column: 1/-1;
 }
-.title{}
-.paragraph{}
+.image{
+  &__wrapper{
+    position: relative;
+    grid-column: span 6;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
 
-.abstract_wrapper{
-  grid-column: span 4;
-}
-.abstract_content{
-  scale: 1.1;
-  transform: translateX(-20px);
+    @include breakpoints.size(md){
+      grid-column: span 3;
+      aspect-ratio: 3/4;
+      height: auto;
+      margin: 0;
+    }
+    @include breakpoints.size(lg){
+      grid-column: span 6;
+    }
+  }
+  display: block;
+  object-fit: cover;
+  object-position: center;
+
 }
 
 @include breakpoints.size(md){
@@ -23,9 +36,6 @@
   }
 }
 @include breakpoints.size(lg){
-  .abstract_wrapper{
-    grid-column: span 7;
-  }
   .content{
     grid-column: 9/15;
   }

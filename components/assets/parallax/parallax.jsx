@@ -1,5 +1,3 @@
-"use client";
-
 import Intro from "@/components/landing-section/intro/intro";
 import About from "@/components/landing-section/about-me/about";
 import Stack from "@/components/landing-section/stack/stack";
@@ -17,19 +15,15 @@ function Section({childElement}){
     </div>
   )
 }
+export default function Parallax({data}) {
 
-
-export default function Parallax({intro}) {
-  console.log(intro)
   return (
     <>
-      <Section childElement={<Intro/>}/>
-      <Section childElement={<About/>}/>
-      <Section childElement={<Stack/>}/>
-      {/*<Section childElement={<Featured/>}/>*/}
-      {/*<Section childElement={<Gallery/>}/>*/}
-      <Section childElement={<Projects/>}/>
-      <Section childElement={<Contact/>}/>
+      <Section childElement={<Intro data={data['Intro']}/>}/>
+      <Section childElement={<About data={data['About']}/>}/>
+      <Section childElement={<Stack data={data['Stack']}/>}/>
+      <Section childElement={<Projects data={data['Gallery']}/>}/>
+      <Section childElement={<Contact data={data['Contact']}/>}/>
     </>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 import styles from "./gallery.module.scss";
 
-export default function Gallery(){
+export default function Gallery({data}){
 
   return(
     <section className={"section "}>
