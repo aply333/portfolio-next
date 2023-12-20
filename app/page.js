@@ -1,9 +1,8 @@
 import Header from "@/components/header/header";
 import Parallax from "@/components/assets/parallax/parallax";
-import { getLandingData } from "@/lib/api/strapi";
+import { landingGraphFetch } from "@/lib/api/strapiGraph";
 export default async function Home() {
-  let landing_data = await getLandingData();
-
+  let landing_data = await landingGraphFetch()
   return (
     <>
     <Header/>

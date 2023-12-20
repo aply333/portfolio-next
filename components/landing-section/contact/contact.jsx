@@ -1,5 +1,6 @@
 import styles from './contact.module.scss';
 import Markdown from "react-markdown";
+import ContactCta from "@/components/contact-cta/contact-cta";
 
 export default function Contact({data}){
   let contact_info = data.Contact.data[0].attributes;
@@ -14,16 +15,18 @@ export default function Contact({data}){
         </div>
 
         <div className={styles.contact}>
-          <label className={styles.label}>Email: </label>
-          <a className={styles.email} href={"mailto:"+contact_info.Email}>{contact_info.Email}</a>
-          <br />
-          <label>Phone: </label>
-          <a className={styles.phone} href={"phoneto:"+contact_info.Phone}>{contact_info.Phone}</a>
+          <label className={'form-label '+styles.label}>Email: </label>
+          <a className={'decorative-link '+styles.email} href={"mailto:"+contact_info.Email}>{contact_info.Email}</a>
+          <br className={styles.break} />
+          <label className={'form-label '+styles.label} >Phone: </label>
+          <a className={'decorative-link '+styles.phone} href={"phoneto:"+contact_info.Phone}>{contact_info.Phone}</a>
         </div>
 
       </div>
 
-      <div className={styles.form}></div>
+      <div className={styles.form}>
+        <ContactCta/>
+      </div>
 
     </section>
   )

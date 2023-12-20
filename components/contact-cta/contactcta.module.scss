@@ -1,0 +1,32 @@
+@use '../global-styles/breakpoints';
+
+.form{
+  display: flex;
+  flex-flow: column nowrap;
+  &--block{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 20px;
+    button{
+      width: min-content;
+      padding: 5px 20px;
+      margin-left: auto;
+      border: none;
+      border-radius: var(--rad-small);
+      background-color: var(--color-core);
+      color: var(--color-white);
+      font-family: "Noto Sans Mono";
+    }
+    input, textarea{
+      font-size: 1.4rem;
+      padding: 5px 10px;
+      height: min-content;
+      border: 1px solid var(--color-core);
+      border-radius: var(--rad-small);
+    }
+    textarea{
+      resize: vertical;
+      overflow: auto;
+    }
+  }
+}

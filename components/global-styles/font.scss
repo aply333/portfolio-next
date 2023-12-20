@@ -37,3 +37,42 @@ ul{
 .markdown-wys{
   p{ @extend .paragraph-gap; }
 }
+
+.form-label{
+  @extend .basic;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.decorative-link{
+  @extend .basic;
+  color: var(--color-core);
+  text-decoration: none;
+  transition: var(--time-mid);
+  transition-timing-function: cubic-bezier(1,.04,.62,.36);
+  position: relative;
+  border-radius: var(--rad-small);
+  outline: 1px solid transparent;
+  &::after{
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    height: 3px;
+    border-radius: var(--rad-small);
+    width: 30%;
+    left: 0;
+    bottom: -3px;
+    transition: var(--time-mid);
+  }
+  &:hover, &:focus{
+    font-weight: 500;
+    &::after{
+      width: 85%;
+      background-color: var(--color-core);
+    }
+  }
+
+  &:focus-visible{
+    outline-offset: 6px;
+    outline: 2px solid var(--color-core);
+  }
+}

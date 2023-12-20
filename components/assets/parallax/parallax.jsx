@@ -22,7 +22,7 @@ export default function Parallax({data}) {
       <Section childElement={<Intro data={data['Intro']}/>}/>
       <Section childElement={<About data={data['About']}/>}/>
       <Section childElement={<Stack data={data['Stack']}/>}/>
-      <Section childElement={<Projects data={data['Gallery']}/>}/>
+      <Section childElement={<Projects data={data['Gallery'].Projects.data}/>}/>
       <Section childElement={<Contact data={data['Contact']}/>}/>
     </>
   );

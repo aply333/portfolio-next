@@ -21,7 +21,7 @@
       margin: 0;
     }
     @include breakpoints.size(lg){
-      grid-column: span 6;
+      grid-column: 3/7;
     }
   }
   display: block;

@@ -1,13 +1,40 @@
+@use '../../global-styles/breakpoints';
+
 .title{
   grid-column: 1/-1;
+  @include breakpoints.size(lg){
+    grid-column: 4/-1;
+  }
 }
 .text{
   grid-column: 1/-1;
+  @include breakpoints.size(md){
+    grid-column: 1/6;
+  }
+  @include breakpoints.size(lg){
+    grid-column: 4/9;
+  }
 }
+.form{
+  grid-column: 1/-1;
+  @include breakpoints.size(md){
+    grid-column: 7/11;
+  }
+  @include breakpoints.size(lg){
+    grid-column: 10/14;
+  }
+}
+
 .excerpts{}
 .line{}
 .contact{}
-.label{}
-.email{}
-.phone{}
-.form{}
+.label{
+ margin-right: 5px;
+}
+.break{
+  margin-bottom: 10px;
+}
+.email,
+.phone{
+
+}
