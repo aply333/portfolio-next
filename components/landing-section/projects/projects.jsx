@@ -7,6 +7,7 @@ import Modal from "@/components/landing-section/projects/modal";
 import ProjectButton from "@/components/landing-section/projects/project";
 
 export default function Projects({data}){
+
   const [modalOpen, setModalOpen] = useState(false);
   const [content, setContent] = useState({})
   const openModal = (e, projectData) =>{

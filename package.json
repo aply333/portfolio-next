@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspark/use-formspark": "^0.1.39",
     "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.3.1",
     "framer-motion": "^10.16.16",
     "graphql-request": "^6.1.0",
     "html-react-parser": "^5.0.10",

@@ -1,11 +1,16 @@
+@use '../../global-styles/breakpoints';
+
 .parallax_target{
-  scroll-snap-align: center;
   position: relative;
   height: 100vh;
-  perspective: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include breakpoints.size(max){
+    min-height: 650px;
+    height: min-content;
+  }
 }
 
 .inner_div{

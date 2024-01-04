@@ -1,16 +1,16 @@
 import {motion} from "framer-motion";
 import styles from "@/components/landing-section/projects/projects.module.scss";
+import {setImageUrl, setImageAlt} from "@/lib/api/formatters";
 import Image from "next/image";
-import getStrapiImage from "@/lib/api/image";
-
 
 function ProjectButton({ clickHandler, item, index}){
-
   function randomDelay(){
     let min = Math.ceil(1);
     let max = Math.floor(10);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+  let imgSource = setImageUrl(item.attributes.Screenshot);
+  let imgAlText = setImageAlt(item.attributes.Screenshot);
 
 
   return(
@@ -32,8 +32,8 @@ function ProjectButton({ clickHandler, item, index}){
 
       <div className={styles.card__image_wrapper}>
         <Image className={styles.card__image}
-               src={getStrapiImage(item.attributes, false,'Screenshot')}
-               alt={getStrapiImage(item.attributes, true, 'Screenshot')}
+               src={imgSource}
+               alt={imgAlText}
                fill={true}
         />
       </div>

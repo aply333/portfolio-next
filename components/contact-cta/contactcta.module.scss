@@ -24,9 +24,10 @@
       border: 1px solid var(--color-core);
       border-radius: var(--rad-small);
     }
-    textarea{
-      resize: vertical;
-      overflow: auto;
+    textarea {
+      min-height: 150px;
+      max-height: 500px;
+      height: auto;
     }
   }
 }

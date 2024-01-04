@@ -8,10 +8,12 @@ async function Header(){
   return(
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <button className={styles['menu-item--contact']}>Contact</button>
-        <Link href={process.env.STRAPI_ROOT+data.Resume.data.attributes.url} target='_blank' aria-label={data.Resume.data.attributes.alternativeText} className={styles['menu-item']}><Svg name={'PDF'}/></Link>
-        <Link href={data.Linkedin} aria-label={'Link to Linkedin Profile'} target='_blank' className={styles['menu-item']}><Svg name={'linkedin'}/></Link>
-        <Link href={data.GitHub} aria-label={'Link to GitHub Profile'} target='_blank' className={styles['menu-item']}><Svg name={'github'}/></Link>
+        <div className={styles['nav--wrapper']}>
+          <button className={styles['menu-item--contact']}>Contact</button>
+          <Link href={process.env.STRAPI_ROOT+data.Resume.data.attributes.url} target='_blank' aria-label={data.Resume.data.attributes.alternativeText} className={styles['menu-item']}><Svg name={'PDF'}/></Link>
+          <Link href={data.Linkedin} aria-label={'Link to Linkedin Profile'} target='_blank' className={styles['menu-item']}><Svg name={'linkedin'}/></Link>
+          <Link href={data.GitHub} aria-label={'Link to GitHub Profile'} target='_blank' className={styles['menu-item']}><Svg name={'github'}/></Link>
+        </div>
       </nav>
     </header>
   )

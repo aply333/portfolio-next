@@ -1,7 +1,7 @@
 @use '../../global-styles/extensions';
 @use '../../global-styles/breakpoints';
 
-.title{
+.title, .stack_wrapper{
   grid-column: 1/-1;
 }
 .list{
@@ -12,6 +12,13 @@
 @include breakpoints.size(md){
   .title,
   .list{
-    grid-column: 3/9 ;
+    grid-column: 3/8 ;
+  }
+  .stack_wrapper{
+    grid-column: 10/17;
+    grid-row: 1/-1;
+
+    outline: 2px solid red;
+    position: relative;
   }
 }

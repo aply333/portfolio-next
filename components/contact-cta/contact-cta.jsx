@@ -1,60 +1,44 @@
 "use client"
-import {useState} from "react";
-import styles from "./contactcta.module.scss";
 
-export default function ContactCta(){
+import { useState } from "react";
+import styles from "./contactcta.module.scss";
+import { useFormspark } from "@formspark/use-formspark";
+
+const FORMSPARK_FORM_ID = 'smtj4W13k';
+
+function ContactCta() {
+  const [submit, submitting] = useFormspark({
+    formId: FORMSPARK_FORM_ID,
+  });
+
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const [error, setError] = useState('');
-
-
-  function onSubmit(e){
+  const onSubmit = async (e) => {
     e.preventDefault();
-    e.stopPropagation();
-
-    fetch("https://formcarry.com/s/IngzXayL48", {
-      method: 'POST',
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ name, email, message })
-    })
-      .then(response => response.json())
-      .then(response => {
-        if (response.code === 200) {
-          alert("We received your submission, thank you!");
-        }
-        else if(response.code === 422){
-          // Field validation failed
-          setError(response.message)
-        }
-        else {
-          // other error from formcarry
-          setError(response.message)
-        }
-      })
-      .catch(error => {
-        // request related error.
-        setError(error.message ? error.message : error);
-      });
-  }
+    await submit({name, email, message});
+    alert("Form submitted");
+  };
 
   return (
-    <form className={styles.form} onSubmit={(e) => onSubmit(e)}>
+    <form onSubmit={onSubmit}>
 
       <div className={styles['form--block']}>
         <label className='form-label' htmlFor="name">Name</label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} id="name"
+        <input type="text"
+               value={name} onChange={(e) => setName(e.target.value)}
+               id="name"
                placeholder="Your first and last name"/>
       </div>
 
       <div className={styles['form--block']}>
         <label className='form-label' htmlFor="email">Email</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} id="email"
+        <input type="email"
+               value={email}
+               onChange={(e) => setEmail(e.target.value)}
+               id="email"
                placeholder="john@doe.com"/>
       </div>
 
@@ -68,9 +52,15 @@ export default function ContactCta(){
         </textarea>
       </div>
 
+
       <div className={styles['form--block']}>
-        <button type="submit">Send</button>
+        <button type="submit" disabled={submitting}>
+          Send
+        </button>
       </div>
-    </form>
-  )
+
+  </form>
+);
 }
+
+export default ContactCta;

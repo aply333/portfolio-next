@@ -25,13 +25,21 @@
 .nav{
   display: flex;
   flex-flow: row nowrap;
-  justify-content: end;
+  justify-content: flex-end;
   width: 100%;
+  &--wrapper{
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
   @include breakpoints.size(md){
     width: 300px;
     float: right;
   }
 }
+
 .menu-item{
   @extend .outline-over-light;
   display: grid;

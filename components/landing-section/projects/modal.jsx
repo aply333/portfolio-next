@@ -2,9 +2,13 @@ import {motion} from "framer-motion";
 import styles from "@/components/landing-section/projects/projects.module.scss";
 import Svg from "@/components/assets/svg/svg";
 import Image from "next/image";
-import getStrapiImage from "@/lib/api/image";
+import {setImageUrl, setImageAlt} from "@/lib/api/formatters";
+// import getStrapiImage from "@/lib/api/image";
 
 function Modal({projectData, handleClose}){
+  let imageSource = setImageUrl(projectData.Screenshot);
+  let imageAlt = setImageAlt(projectData.Screenshot);
+
   return (
     <motion.div className={styles.about_project}
                 initial={{ opacity: 0 }}
@@ -19,8 +23,8 @@ function Modal({projectData, handleClose}){
 
       <div className={styles.about_project__image_wrapper}>
         <Image className={styles.about_project__image}
-               src={getStrapiImage(projectData, false,'Screenshot')}
-               alt={getStrapiImage(projectData, true, 'Screenshot')}
+               src={imageSource}
+               alt={imageAlt}
                fill={true}/>
       </div>
 

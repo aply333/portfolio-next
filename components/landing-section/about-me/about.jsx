@@ -1,16 +1,19 @@
 import styles from "./about.module.scss";
 import Markdown from "react-markdown";
 import Image from "next/image";
-import getStrapiImage from "@/lib/api/image";
+import {setImageAlt, setImageUrl} from "@/lib/api/formatters";
+// import getStrapiImage from "@/lib/api/image";
 
 export default function About({data}){
+  let aboutImage = setImageUrl(data.Image);
+  let aboutAlt = setImageAlt(data.Image);
 
   return(
     <section className={"section--with-grid "+ styles.about}>
       <div className={styles.image__wrapper}>
       <Image className={styles.image}
-             src={getStrapiImage(data)}
-             alt={getStrapiImage(data, true)}
+             src={aboutImage}
+             alt={aboutAlt}
             fill={true}
       />
       </div>
