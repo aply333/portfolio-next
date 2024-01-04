@@ -16,7 +16,9 @@ $colors : (
         "dark-grey"     : #33415C,
   // __Norms
         'white' : #FFFFFF,
-        'black' : #000000
+        'black' : #000000,
+  // __Alternates
+        'bk-blue' : #000,
 );
 
 $radius : (
@@ -53,6 +55,7 @@ $levels : (
     --level-#{$name}: #{$lvl};
   }
   --grad-white: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  --grad-dark: linear-gradient(180deg, rgba(4, 28, 50, .8) 0%, rgb(4, 28, 50, 0) 80%);
   --time-base: all ease 250ms;
   --time-mid: all ease 400ms;
   --box-shadow: 5px 5px 60px -35px rgba(0,0,0,0.75);

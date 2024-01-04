@@ -6,8 +6,8 @@
   gap: 10px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   position: relative;
-  height: 60vh;
-
+  height: 75vh;
+  max-height: 1200px;
   @include breakpoints.size(md){
     padding-top: 0;
     grid-template-columns: repeat(10, minmax(0, 1fr) );
@@ -82,9 +82,7 @@
   padding: 20px;
   z-index: var(--level-top-2);
   height: min-content;
-  @include breakpoints.size(md){
-    grid-column: 4/8;
-  }
+  @include breakpoints.size(md){ grid-column: 4/8; }
 
   &__top_row{
     display: flex;
@@ -127,21 +125,15 @@
       margin-bottom: 20px;
       padding-bottom: 2rem;
       padding-top: 2rem;
-      @include breakpoints.size(md){
-        height: 260px;
-      }
+      @include breakpoints.size(md){ height: 260px; }
     }
   }
-  &__content{
-    padding: 10px;
-  }
+  &__content{ padding: 10px; }
 }
 .list{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   margin-bottom: 2rem;
-  li{
-    margin-right: 1rem;
-  }
+  li{ margin-right: 1rem; }
 }

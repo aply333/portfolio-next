@@ -2,39 +2,29 @@
 
 .title{
   grid-column: 1/-1;
-  @include breakpoints.size(lg){
-    grid-column: 4/-1;
-  }
+  @include breakpoints.size(lg){ grid-column: 4/-1; }
 }
 .text{
   grid-column: 1/-1;
-  @include breakpoints.size(md){
-    grid-column: 1/6;
-  }
-  @include breakpoints.size(lg){
-    grid-column: 4/9;
-  }
+  @include breakpoints.size(md){ grid-column: 1/6; }
+  @include breakpoints.size(lg){ grid-column: 4/9; }
 }
 .form{
   grid-column: 1/-1;
-  @include breakpoints.size(md){
-    grid-column: 7/11;
-  }
-  @include breakpoints.size(lg){
-    grid-column: 10/14;
-  }
+  @include breakpoints.size(md){ grid-column: 7/11; }
+  @include breakpoints.size(lg){ grid-column: 10/14; }
 }
 
 .excerpts{}
 .line{}
-.contact{}
-.label{
- margin-right: 5px;
+.contact{ margin-bottom: 20px; }
+.contact_wrapper{
+  height: 80vh;
+  &__inner_bounds{ height: min-content; }
 }
-.break{
-  margin-bottom: 10px;
-}
-.email,
-.phone{
-
+.label{ margin-right: 5px; }
+.break{ margin-bottom: 10px; }
+.email, .phone{
+  display: inline-block;
+  margin-top: 10px;
 }

@@ -1,11 +1,7 @@
 @use '../../global-styles/breakpoints';
 
-.about{
-  align-items: center;
-}
-.content{
-  grid-column: 1/-1;
-}
+.about{ align-items: center; }
+.content{ grid-column: 1/-1; }
 .image{
   &__wrapper{
     position: relative;
@@ -20,23 +16,16 @@
       height: auto;
       margin: 0;
     }
-    @include breakpoints.size(lg){
-      grid-column: 3/7;
-    }
+    @include breakpoints.size(lg){ grid-column: 3/7; }
   }
   display: block;
   object-fit: cover;
   object-position: center;
-
 }
 
 @include breakpoints.size(md){
-  .content{
-    grid-column: 5/11;
-  }
+  .content{ grid-column: 5/11; }
 }
 @include breakpoints.size(lg){
-  .content{
-    grid-column: 9/15;
-  }
+  .content{ grid-column: 9/15; }
 }

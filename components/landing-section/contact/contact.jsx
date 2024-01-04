@@ -6,7 +6,10 @@ export default function Contact({data}){
   let contact_info = data.Contact.data[0].attributes;
 
   return(
-    <section className={"section--with-grid"}>
+    <div className={styles.contact_wrapper}>
+
+
+    <section className={"section--with-grid "+styles.contact_wrapper__inner_bounds}>
       <h2 className={'section-title '+styles.title}>{data.Title}</h2>
       <div className={styles.text}>
 
@@ -29,5 +32,7 @@ export default function Contact({data}){
       </div>
 
     </section>
+
+    </div>
   )
 }

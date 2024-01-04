@@ -1,12 +1,19 @@
 @use '../../global-styles/extensions';
 @use '../../global-styles/breakpoints';
 
-.title, .stack_wrapper{
-  grid-column: 1/-1;
-}
+.title{ grid-column: 1/-1; }
 .list{
   @extend .stack-list;
   grid-column: 1/-1;
+}
+.stack_wrapper{
+  grid-column: 1/-1;
+  grid-row: span 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 @include breakpoints.size(md){
@@ -15,10 +22,7 @@
     grid-column: 3/8 ;
   }
   .stack_wrapper{
-    grid-column: 10/17;
-    grid-row: 1/-1;
-
-    outline: 2px solid red;
+    grid-column: 10/15;
     position: relative;
   }
 }
