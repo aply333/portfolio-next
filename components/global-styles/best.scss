@@ -5,4 +5,7 @@
 @use './font';
 
 * { box-sizing: border-box; }
-html { font-size: 10px; }
+html {
+  font-size: 10px;
+  color: var(--color-white);
+}

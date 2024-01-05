@@ -45,7 +45,7 @@ ul{
 }
 .decorative-link{
   @extend .basic;
-  color: var(--color-core);
+  color: var(--color-alt1-accent);
   text-decoration: none;
   transition: var(--time-mid);
   transition-timing-function: cubic-bezier(1,.04,.62,.36);
@@ -67,12 +67,12 @@ ul{
     font-weight: 500;
     &::after{
       width: 85%;
-      background-color: var(--color-core);
+      background-color: var(--color-alt1-accent);
     }
   }
 
   &:focus-visible{
     outline-offset: 6px;
-    outline: 2px solid var(--color-core);
+    outline: 2px solid var(--color-accent);
   }
 }

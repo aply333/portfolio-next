@@ -13,9 +13,16 @@
       margin-left: auto;
       border: none;
       border-radius: var(--rad-small);
-      background-color: var(--color-core);
-      color: var(--color-white);
+      background-color: var(--color-white);
+      color: var(--color-core);
       font-family: "Noto Sans Mono";
+      font-size: 1.6rem;
+      font-weight: 600;
+      transition: var(--time-mid);
+      &:hover, &:focus{
+        background-color: var(--color-accent);
+        color: var(--color-white);
+      }
     }
     input, textarea{
       font-size: 1.4rem;

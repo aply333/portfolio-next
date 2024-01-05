@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $colors : (
         "accent"      : #FF6D00,
         "alt1-accent" : #FF8500,
@@ -54,6 +56,8 @@ $levels : (
   @each $name, $lvl in $levels{
     --level-#{$name}: #{$lvl};
   }
+  --transparent-core: rgba(2, 62, 125, .4);
+  --transparent-dark: rgba(0, 24, 69, .6);
   --grad-white: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
   --grad-dark: linear-gradient(180deg, rgba(4, 28, 50, .8) 0%, rgb(4, 28, 50, 0) 80%);
   --time-base: all ease 250ms;

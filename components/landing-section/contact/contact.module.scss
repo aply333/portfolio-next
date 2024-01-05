@@ -1,4 +1,5 @@
 @use '../../global-styles/breakpoints';
+@use '../../global-styles/extensions';
 
 .title{
   grid-column: 1/-1;
@@ -17,9 +18,14 @@
 
 .excerpts{}
 .line{}
-.contact{ margin-bottom: 20px; }
+.contact{
+  margin-bottom: 20px;
+}
 .contact_wrapper{
-  height: 80vh;
+  min-height: 80vh;
+  @extend .backdrop-blur;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   &__inner_bounds{ height: min-content; }
 }
 .label{ margin-right: 5px; }

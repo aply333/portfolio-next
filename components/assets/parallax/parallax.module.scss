@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 80vh;
 
   @include breakpoints.size(max){
     min-height: 650px;
@@ -12,9 +13,7 @@
   }
 }
 
-.inner_div{
-  width: 100%;
-}
+.inner_div{ width: 100%; }
 
 .title{
   left: calc(50% + 130px);

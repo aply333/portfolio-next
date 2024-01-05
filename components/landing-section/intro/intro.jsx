@@ -21,7 +21,6 @@ function Intro({data}){
           src={imageSource} alt={altText}
           width={300}
           height={300}/>
-        <IntroAbstract parent_class={styles.intro_abstract}/>
       </section>
     </div>
   );

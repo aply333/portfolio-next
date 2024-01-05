@@ -2,7 +2,6 @@ import styles from "./about.module.scss";
 import Markdown from "react-markdown";
 import Image from "next/image";
 import {setImageAlt, setImageUrl} from "@/lib/api/formatters";
-// import getStrapiImage from "@/lib/api/image";
 
 export default function About({data}){
   let aboutImage = setImageUrl(data.Image);
@@ -14,7 +13,7 @@ export default function About({data}){
       <Image className={styles.image}
              src={aboutImage}
              alt={aboutAlt}
-            fill={true}
+             fill={true}
       />
       </div>
       <div className={styles.content}>

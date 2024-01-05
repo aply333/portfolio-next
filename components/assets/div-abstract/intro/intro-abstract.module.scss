@@ -6,23 +6,9 @@
   transition: var(--time-base);
   border-bottom-right-radius: var(--rad-hardest);
   opacity: 1;
-  width: 0%;
-  //&:hover{
-  //  background-color: var(--color-accent);
-  //}
-  &__one{
-    background-color: var(--color-darkest);
-  }
-  &__two{
-    //width: 80%;
-    background-color: var(--color-darker);
-  }
-  &__three{
-    //width: 60%;
-    background-color: var(--color-dark);
-  }
-  &__four{
-    //width: 40%;
-    background-color: var(--color-core);
-  }
+  //width: 0%;
+  &__one{ background-color: var(--color-accent); }
+  &__two{ background-color: var(--color-alt1-accent); }
+  &__three{ background-color: var(--color-alt2-accent); }
+  &__four{ background-color:#ffd500; }
 }

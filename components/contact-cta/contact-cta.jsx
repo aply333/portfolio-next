@@ -24,7 +24,7 @@ function ContactCta() {
 
   return (
     <form onSubmit={onSubmit}>
-
+      <time dateTime="2016-10-25" suppressHydrationWarning/>
       <div className={styles['form--block']}>
         <label className='form-label' htmlFor="name">Name</label>
         <input type="text"
@@ -59,8 +59,8 @@ function ContactCta() {
         </button>
       </div>
 
-  </form>
-);
+    </form>
+  );
 }
 
 export default ContactCta;

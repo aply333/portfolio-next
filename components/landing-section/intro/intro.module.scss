@@ -4,13 +4,16 @@
 .heading-text{
   grid-column: 1/-1;
   margin-bottom: 20px;
+
 }
 .subheading{ margin-bottom: 20px; }
 .headshot{
   grid-column: 2/7;
   width: 100%;
   aspect-ratio: 1/1;
-  grid-row: span 2;
+  background-color: var(--transparent-core);
+  border-radius: 100%;
+  border: 5px solid var(--color-core);
 }
 
 .intro_wrapper{
@@ -18,25 +21,18 @@
   height: calc( 100vh - 90px );
   display: grid;
   place-content: center;
+  position: relative;
+  @include breakpoints.size(md){
+    margin-top: 0px;
+  }
 }
 
 .intro{
   position: relative;
   height: min-content;
-}
-.intro_abstract{
-  grid-column: 1/-1;
-  @include breakpoints.size(md){ grid-column: 2/6; }
-  @include breakpoints.size(lg){ grid-column: 4/10; }
-}
-
-.abstract{
-  position: absolute;
-  width: 800px;
-  right: -250px;
-  rotate: -25deg;
-  top: -300px;
-  z-index: var(--level-sub-5);
+  align-items: center;
+  @extend .backdrop-blur;
+  border: none;
 }
 
 @include breakpoints.size(md){

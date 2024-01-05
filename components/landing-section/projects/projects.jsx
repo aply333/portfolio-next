@@ -20,11 +20,6 @@ export default function Projects({data}){
     setModalOpen(false);
   }
 
-  function randomDelay(){
-    let min = Math.ceil(1);
-    let max = Math.floor(data.length);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
 
   function ProjectButtons(){
     return (
