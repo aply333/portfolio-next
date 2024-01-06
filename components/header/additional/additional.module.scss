@@ -1,0 +1,35 @@
+@use '../../global-styles/extensions';
+
+.additional{
+  @extend .backdrop-blur;
+  background-color: var(--color-darkest);
+  margin-top: 20px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  ul{
+    li{
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      border-bottom: 1px solid var(--color-dark);
+      display: flex;
+      align-items: center;
+      transition: var(--time-mid);
+      padding-left: 1rem;
+      a{
+        display: inline-block;
+        height: 80%;
+      }
+      &:last-of-type{
+        border-bottom: none;
+      }
+      //&:hover, &:focus{
+      //  border-left: 10px solid var(--color-accent)
+      //}
+    }
+  }
+}

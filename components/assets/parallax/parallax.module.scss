@@ -1,0 +1,19 @@
+@use '../../global-styles/breakpoints';
+
+.parallax_target{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include breakpoints.size(max){
+    min-height: 650px;
+    height: min-content;
+  }
+}
+.inner_div{ width: 100%; }
+
+.title{
+  left: calc(50% + 130px);
+  line-height: 1.2;
+  position: absolute;
+}

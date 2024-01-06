@@ -1,0 +1,12 @@
+@use './resets';
+@use './variables';
+@use './layouts';
+@use './breakpoints';
+@use './font';
+
+* { box-sizing: border-box; }
+html {
+  font-size: 10px;
+  color: var(--color-white);
+  scroll-behavior: smooth;
+}

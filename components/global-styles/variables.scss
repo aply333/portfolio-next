@@ -1,0 +1,66 @@
+@use "sass:map";
+
+$colors : (
+        "accent"      : #FF6D00,
+        "alt1-accent" : #FF8500,
+        "alt2-accent" : #FF9E00,
+  // __ Core
+        "brighter"  : #0466C8,
+        "bright"    : #0353A4,
+        "core"      : #023E7D,
+        "dark"      : #002855,
+        "darker"    : #001845,
+        "darkest"   : #001233,
+  //  __ Greys
+        "grey-lightest" : #979DAC,
+        "grey-lighter"  : #7D8597,
+        "grey"          : #5C677D,
+        "dark-grey"     : #33415C,
+  // __Norms
+        'white' : #FFFFFF,
+        'black' : #000000,
+  // __Alternates
+        'bk-blue' : #000,
+);
+
+$radius : (
+  small: 8px,
+  hard: 12px,
+  hardest: 60px
+);
+
+$levels : (
+// Sub-Content
+  sub-1 : -1,
+  sub-2 : -2,
+  sub-3 : -3,
+  sub-4 : -4,
+  sub-5 : -5,
+// Content
+  cont-1 : 0,
+  cont-3 : 1,
+  content: 3,
+// Top-Content
+  top-1 : 4,
+  top-2 : 5,
+  top-3 : 6
+);
+
+:root{
+  @each $name, $hex in $colors{
+    --color-#{$name}: #{$hex};
+  }
+  @each $name, $rad in $radius{
+    --rad-#{$name}: #{$rad};
+  }
+  @each $name, $lvl in $levels{
+    --level-#{$name}: #{$lvl};
+  }
+  --transparent-core: rgba(2, 62, 125, .4);
+  --transparent-dark: rgba(0, 24, 69, .6);
+  --grad-white: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  --grad-dark: linear-gradient(180deg, rgba(4, 28, 50, .8) 0%, rgb(4, 28, 50, 0) 80%);
+  --time-base: all ease 250ms;
+  --time-mid: all ease 400ms;
+  --box-shadow: 5px 5px 60px -35px rgba(0,0,0,0.75);
+}

@@ -1,0 +1,51 @@
+@use '../../global-styles/extensions';
+@use '../../global-styles/breakpoints';
+
+.stack_section{
+  @extend .backdrop-blur;
+  padding: 0px;
+  align-items: center;
+  overflow: hidden;
+}
+.content{
+  grid-column: 1/-1;
+  padding: 20px;
+}
+.title{
+  margin-bottom: 2rem;
+}
+.list{
+  @extend .stack-list;
+  max-height: auto;
+}
+.stack_wrapper{
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--color-darkest);
+  padding: 40px;
+  height: 100%;
+}
+
+@include breakpoints.size(md){
+  .content{
+    grid-column: 1/6 ;
+    padding-left: 50px;
+  }
+  .list{
+    height: 100%;
+  }
+  .stack_wrapper{
+    grid-column: 6/11;
+    position: relative;
+  }
+}
+
+@include breakpoints.size(lg){
+  .stack_wrapper{
+    grid-column: 9/17;
+  }
+}
