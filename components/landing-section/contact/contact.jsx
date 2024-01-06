@@ -6,7 +6,7 @@ export default function Contact({data}){
   let contact_info = data.Contact.data[0].attributes;
 
   return(
-    <div className={styles.contact_wrapper}>
+    <div id="contact_section" className={styles.contact_wrapper}>
 
 
     <section className={"section--with-grid "+styles.contact_wrapper__inner_bounds}>

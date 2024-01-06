@@ -38,7 +38,7 @@ export default function Projects({data}){
   }
 
   return (
-    <section className={"section--with-grid " + styles.projects}>
+    <section id="my_gallery_section" className={"section--with-grid " + styles.projects}>
       <AnimatePresence>
         { modalOpen ? <Modal projectData={content} handleClose={closeModal}/> : <ProjectButtons/> }
       </AnimatePresence>

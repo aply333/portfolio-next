@@ -12,11 +12,6 @@
 
 }
 .nav{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  width: 100%;
-
   &--wrapper{
     max-width: 400px;
     width: 100%;
@@ -29,9 +24,10 @@
     padding: 10px 20px;
     border-radius: var(--rad-hard);
     box-shadow: var(--box-shadow);
+    position: relative;
   }
   @include breakpoints.size(md){
-    width: 300px;
+    width: 350px;
     float: right;
   }
 }

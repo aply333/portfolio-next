@@ -13,9 +13,9 @@
     margin-bottom: 20px;
     border-radius: var(--rad-hard);
     overflow: hidden;
-
+    box-shadow: var(--box-shadow);
     @include breakpoints.size(md){
-      grid-column: span 3;
+      grid-column: span 5;
       aspect-ratio: 3/4;
       height: auto;
       margin: 0;
@@ -28,7 +28,7 @@
 }
 
 @include breakpoints.size(md){
-  .content{ grid-column: 5/11; }
+  .content{ grid-column: 6/11; }
 }
 @include breakpoints.size(lg){
   .content{ grid-column: 9/15; }

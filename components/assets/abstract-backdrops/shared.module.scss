@@ -18,10 +18,11 @@
   transform: translateX(-60vh);
   width: 160vh;
   min-height: 15%;
+  box-shadow: var(--box-shadow);
   transition: height ease-in-out 500ms;
   @include breakpoints.size(md){
     transform: translateX(-40vw);
-    width: 160vw;
+    width: 180vw;
   }
   &__1{
     @extend .stripe;

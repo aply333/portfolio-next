@@ -22,11 +22,16 @@
   margin-bottom: 20px;
 }
 .contact_wrapper{
-  min-height: 80vh;
+  min-height: 40vh;
   @extend .backdrop-blur;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  &__inner_bounds{ height: min-content; }
+  &__inner_bounds{
+    height: min-content;
+    @include breakpoints.size(md){
+      margin-bottom: 60px;
+    }
+  }
 }
 .label{ margin-right: 5px; }
 .break{ margin-bottom: 10px; }

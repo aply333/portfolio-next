@@ -82,6 +82,8 @@
   padding: 20px;
   z-index: var(--level-top-2);
   height: min-content;
+  background-color: var(--color-white);
+  color: var(--color-darkest);
   @include breakpoints.size(md){ grid-column: 4/8; }
 
   &__top_row{
@@ -118,6 +120,8 @@
     object-position: top;
     object-fit: cover;
     display: block;
+    border-radius: var(--rad-hard);
+
     &_wrapper{
       position: relative;
       height: 160px;
@@ -125,6 +129,7 @@
       margin-bottom: 20px;
       padding-bottom: 2rem;
       padding-top: 2rem;
+      box-shadow: var(--box-shadow);
       @include breakpoints.size(md){ height: 260px; }
     }
   }

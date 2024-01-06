@@ -8,7 +8,7 @@ export default function About({data}){
   let aboutAlt = setImageAlt(data.Image);
 
   return(
-    <section className={"section--with-grid "+ styles.about}>
+    <section id="about_me_section"  className={"section--with-grid "+ styles.about}>
       <div className={styles.image__wrapper}>
       <Image className={styles.image}
              src={aboutImage}
