@@ -8,7 +8,7 @@ export default async function Home() {
     <>
     <Header/>
     <main className='container'>
-      <Parallax data={landing_data}/>
+      {/*<Parallax data={landing_data}/>*/}
     </main>
     <Footer/>
     </>
