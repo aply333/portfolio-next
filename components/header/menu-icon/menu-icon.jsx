@@ -3,6 +3,7 @@ import styles from "./menu-icon.module.scss";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Additional from "@/components/header/additional/additional";
+
 export default function MenuIcon (){
   const [ isOpen, setOpen ] = useState({isOpen:false});
   let handleClick = (e) => {
