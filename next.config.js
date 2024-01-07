@@ -3,7 +3,7 @@
 
 const nextConfig = {
   images: {
-    domains: [ "https://aply-xl8gb.ondigitalocean.app" ]
+    domains: [ "aply-xl8gb.ondigitalocean.app" ]
   }
 }
 
