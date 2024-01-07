@@ -3,7 +3,7 @@
 
 const nextConfig = {
   images: {
-    domains: [ process.env.STRAPI_ROOT ]
+    domains: [ "https://aply-xl8gb.ondigitalocean.app" ]
   }
 }
 
