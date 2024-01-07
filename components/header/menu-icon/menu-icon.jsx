@@ -28,10 +28,10 @@ export default function MenuIcon (){
     });
   }
 
-  let handleEscape = (e) => {
-    if(e.key === "Escape" && isOpen.isOpen){ handleClick(e) }
-  }
-  document.addEventListener("keyup", handleEscape, { });
+  // let handleEscape = (e) => {
+  //   if(e.key === "Escape" && isOpen.isOpen){ handleClick(e) }
+  // }
+  // document.addEventListener("keyup", handleEscape, { });
 
 
   return(
