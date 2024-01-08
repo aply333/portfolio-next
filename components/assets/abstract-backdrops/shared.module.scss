@@ -21,6 +21,7 @@
   box-shadow: var(--box-shadow);
   transition: all ease-in-out 500ms;
   position: relative;
+  transform-origin: top;
   @include breakpoints.size(md){
     transform: translateX(-40vw);
     width: 180vw;
