@@ -6,7 +6,7 @@ export default async function Home() {
   let landing_data = await landingGraphFetch()
   return (
     <>
-    {/*<Header/>*/}
+    <Header/>
     <main className='container'>
       <Parallax data={landing_data}/>
     </main>
