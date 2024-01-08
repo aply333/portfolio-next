@@ -14,12 +14,19 @@ export default function Backdrop({ scroll }){
     <div className={styles.backdrop}>
       <div className={styles.backdrop__wrapper} style={{ rotate: `${30*current + 30}deg` }}>
 
-      <div className={styles['stripe__1']} style = {{ height:  0 < current <= .2 ? '60%' : '16%', }} ></div>
-      <div className={styles['stripe__2']} style = {{ height: .2 < current <= .4 ? '60%' : '16%', }} ></div>
-      <div className={styles['stripe__3']} style = {{ height: .4 < current <= .6 ? '60%' : '16%', }} ></div>
-      <div className={styles['stripe__4']} style = {{ height: .6 < current <= .8 ? '60%' : '16%', }} ></div>
-      <div className={styles['stripe__5']} style = {{ height: .8 < current <=  1 ? '60%' : '16%', }} ></div>
-      <div className={styles['stripe__6']} style = {{ height: '16%', }}></div>
+      {/*<div className={styles['stripe__1']} style = {{ height:  0 < current <= .2 ? '60%' : '16%', }} ></div>*/}
+      {/*<div className={styles['stripe__2']} style = {{ height: .2 < current <= .4 ? '60%' : '16%', }} ></div>*/}
+      {/*<div className={styles['stripe__3']} style = {{ height: .4 < current <= .6 ? '60%' : '16%', }} ></div>*/}
+      {/*<div className={styles['stripe__4']} style = {{ height: .6 < current <= .8 ? '60%' : '16%', }} ></div>*/}
+      {/*<div className={styles['stripe__5']} style = {{ height: .8 < current <=  1 ? '60%' : '16%', }} ></div>*/}
+      {/*<div className={styles['stripe__6']} style = {{ height: '16%', }}></div>      */}
+
+      <div className={styles['stripe__1']} style = {{ transform:  0 < current <= .2 ? 'scale(6)' : 'scale(1)', }} ></div>
+      <div className={styles['stripe__2']} style = {{ transform: .2 < current <= .4 ? 'scale(6)' : 'scale(1)', }} ></div>
+      <div className={styles['stripe__3']} style = {{ transform: .4 < current <= .6 ? 'scale(6)' : 'scale(1)', }} ></div>
+      <div className={styles['stripe__4']} style = {{ transform: .6 < current <= .8 ? 'scale(6)' : 'scale(1)', }} ></div>
+      <div className={styles['stripe__5']} style = {{ transform: .8 < current <=  1 ? 'scale(6)' : 'scale(1)', }} ></div>
+      <div className={styles['stripe__6']} ></div>
 
       </div>
     </div>
