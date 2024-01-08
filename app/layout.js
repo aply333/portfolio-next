@@ -1,5 +1,6 @@
 import { Noto_Sans_Mono} from 'next/font/google'
 import '../components/global-styles/best.scss';
+import { Analytics } from '@vercel/analytics/react';
 
 const sans = Noto_Sans_Mono({ subsets: ['latin'] })
 
@@ -11,7 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={sans.className}>{children}</body>
+      <body className={sans.className}>
+      {children}
+      <Analytics />
+      </body>
     </html>
   )
 }
