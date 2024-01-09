@@ -13,9 +13,7 @@ export default function Additional({isOpen}){
         initial={{ opacity: 0, scaleY: 0, }}
         animate={{ opacity: 1, scaleY : 1}}
         exit={{ opacity: 0, scaleY: 0}}
-
-        transition={{ type: "tween", duration: .25  }}
-      >
+        transition={{ type: "tween", duration: .25  }}>
         <ul>
           <li><Link className='decorative-link' href={"#"}>Test</Link></li>
           <li><Link className='decorative-link' href={"#"}>Test</Link></li>

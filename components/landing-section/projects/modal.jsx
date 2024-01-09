@@ -3,7 +3,7 @@ import styles from "@/components/landing-section/projects/projects.module.scss";
 import Svg from "@/components/assets/svg/svg";
 import Image from "next/image";
 import {setImageUrl, setImageAlt} from "@/lib/api/formatters";
-// import getStrapiImage from "@/lib/api/image";
+import Markdown from "react-markdown";
 
 function Modal({projectData, handleClose}){
   let imageSource = setImageUrl(projectData.Screenshot);
@@ -34,7 +34,7 @@ function Modal({projectData, handleClose}){
             <li key={Math.random()} className={styles.item}>{ tech.attributes.Tech }</li>
           ))}
         </ul>
-        <p>{projectData.About}</p>
+        <Markdown>{projectData.About}</Markdown>
       </div>
     </motion.div>
   );
