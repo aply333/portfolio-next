@@ -10,12 +10,10 @@ export default function Additional({isOpen}){
     return (
       <motion.div
         className={styles.additional}
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: 1, height: 'auto'}}
-        exit={{ opacity: 0, height: 0}}
-
-        transition={{ type: "tween", duration: .5  }}
-      >
+        initial={{ opacity: 0, scaleY: 0, }}
+        animate={{ opacity: 1, scaleY : 1}}
+        exit={{ opacity: 0, scaleY: 0}}
+        transition={{ type: "tween", duration: .25  }}>
         <ul>
           <li><Link className='decorative-link' href={"#"}>Test</Link></li>
           <li><Link className='decorative-link' href={"#"}>Test</Link></li>

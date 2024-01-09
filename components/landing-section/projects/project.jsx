@@ -12,7 +12,15 @@ function ProjectButton({ clickHandler, item, index}){
   let imgSource = setImageUrl(item.attributes.Screenshot);
   let imgAlText = setImageAlt(item.attributes.Screenshot);
 
+  let alternate = 1;
+  if(index % 2 === 0 ) {
+    alternate = 2
+  }
+  if(index % 3 === 0 ) {
+    alternate = 3
+  }
 
+  console.log(item)
   return(
     <motion.button
       key={Math.random()}
@@ -29,13 +37,16 @@ function ProjectButton({ clickHandler, item, index}){
       }}
       exit={{ opacity: 0 }}
     >
-
       <div className={styles.card__image_wrapper}>
         <Image className={styles.card__image}
                src={imgSource}
                alt={imgAlText}
-               fill={true}
-        />
+               fill={true} />
+      </div>
+      <div className={styles.card__title+' '+styles[`card__title--${alternate}`]}>
+        <div className={styles.card__title__wrapper}>
+          <p className="">{item.attributes.Title}</p>
+        </div>
       </div>
     </motion.button>
   )

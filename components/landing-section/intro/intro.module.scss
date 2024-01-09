@@ -24,7 +24,7 @@
   place-content: center;
   position: relative;
   @include breakpoints.size(md){
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 

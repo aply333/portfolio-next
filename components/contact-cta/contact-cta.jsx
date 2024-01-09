@@ -11,7 +11,6 @@ function ContactCta() {
     formId: FORMSPARK_FORM_ID,
   });
 
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
