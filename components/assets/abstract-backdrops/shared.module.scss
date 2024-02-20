@@ -7,6 +7,7 @@
   width: 140vw;
   height: 140vh;
   background-color: var(--color-core);
+  z-index: -50;
   &__wrapper{
     width: 120%;
     height: 120%;

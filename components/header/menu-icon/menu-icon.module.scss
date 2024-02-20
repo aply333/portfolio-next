@@ -19,10 +19,26 @@
 
 .line{
   width: 14px;
-  height: 4px;
+  height: 3px;
   background-color: var(--color-white);
   display: block;
 }
+.top{
+  @extend .line;
+  width: 28px;
+  position: absolute;
+  transform: translateY(-8px);
+  border-radius: 4px;
+}
+
+.bottom{
+  @extend .line;
+  width: 28px;
+  position: absolute;
+  transform: translateY(8px);
+  border-radius: 4px;
+}
+
 .left{
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;

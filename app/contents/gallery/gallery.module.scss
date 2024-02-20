@@ -1,0 +1,33 @@
+@use "../../../components/global-styles/font-type.scss";
+
+.gallery{
+    margin-top: 240px;
+}
+
+.filter{
+    grid-column: 1/-1;
+    grid-row: 1;
+}
+
+.card_title{
+    color: var(--color-darkest);
+    text-align: center;
+}
+
+// * Attempt - Self note, target base element within a class. 
+
+
+
+.card{
+    grid-column: span 4;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+
+    // * Card Title:
+    h3{
+        @extend .title--4;
+        color: var(--color-darkest);
+    }
+}

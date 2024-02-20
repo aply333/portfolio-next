@@ -20,7 +20,7 @@ function ProjectButton({ clickHandler, item, index}){
     alternate = 3
   }
 
-  console.log(item)
+
   return(
     <motion.button
       key={Math.random()}

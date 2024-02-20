@@ -1,4 +1,5 @@
 "use client"
+
 import styles from "./menu-icon.module.scss";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -11,12 +12,14 @@ export default function MenuIcon (){
     isOpen.isOpen ? setOpen({
       isOpen: false,
       right: {},
-      left: {}
+      left: {},
+      other: {}
     }) : setOpen({
       isOpen: true,
       left: {
         x: 2,
         y: -1,
+        height: '4px',
         rotate: '30deg',
         backgroundColor: `var(--color-accent)`
       },
@@ -24,7 +27,11 @@ export default function MenuIcon (){
         x: -2,
         y: -1,
         rotate: '-30deg',
+        height: '4px',
         backgroundColor: `var(--color-accent)`
+      },
+      other:{
+        opacity: 0,
       }
     });
   }
@@ -38,6 +45,11 @@ export default function MenuIcon (){
   return(
     <>
       <button onClick={handleClick} className={styles.button}>
+        <motion.span 
+          className={styles.top}
+          animate={isOpen.other}
+          transition={{ duration: .1, type: "tween"}}
+          ></motion.span>
         <motion.span
           className={styles.left}
           animate={isOpen.left}
@@ -48,7 +60,13 @@ export default function MenuIcon (){
           animate={isOpen.right}
           transition={{ duration: .1, type: "tween" }}
         ></motion.span>
+        <motion.span 
+          className={styles.bottom}
+          animate={isOpen.other}
+          transition={{ duration: .1, type: "tween"}}
+          ></motion.span>
       </button>
+
       <Additional isOpen={isOpen}/>
     </>
   )

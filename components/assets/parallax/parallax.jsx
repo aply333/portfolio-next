@@ -8,8 +8,8 @@ import Projects from "@/components/landing-section/projects/projects";
 
 
 import style from "./parallax.module.scss";
-import { useInView, useScroll, useMotionValueEvent } from "framer-motion";
-import {createContext, useContext, useEffect, useRef, useState} from "react";
+import { useInView } from "framer-motion";
+import {createContext, useRef} from "react";
 import Backdrop from "@/components/assets/abstract-backdrops/backdrops";
 
 const ViewContext = createContext();
@@ -39,12 +39,9 @@ function Section({childElement}){
 
 export default function Parallax({data}) {
 
-  const { scrollYProgress } = useScroll();
-
-
   return (
     <>
-      <Backdrop scroll={ scrollYProgress }/>
+      <Backdrop/>
       <Intro data={data['Intro']}/>
       <Section childElement={<About data={data['About']}/>} />
       <Section childElement={<Stack data={data['Stack']}/>} />

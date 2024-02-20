@@ -1,17 +1,19 @@
 "use client"
 
 import styles from "./shared.module.scss";
-import {useMotionValueEvent} from "framer-motion";
+import {useMotionValueEvent, useScroll} from "framer-motion";
 import {useState} from "react";
 
-export default function Backdrop({ scroll }){
+export default function Backdrop(){
+  
+  const { scrollYProgress } = useScroll();
   const [current, setCurrent] = useState(0);
-  useMotionValueEvent(scroll, "change", (latest) => {
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
     setCurrent(latest)
   })
 
   return(
-    <div className={styles.backdrop}>
+    <div aria-hidden="true" className={styles.backdrop}>
       <div className={styles.backdrop__wrapper} style={{ rotate: `${30*current + 30}deg` }}>
 
       <div className={styles['stripe__1']} style = {{ transform:  0 < current <= .2 ? 'scale(6)' : 'scale(1)', }} ></div>
