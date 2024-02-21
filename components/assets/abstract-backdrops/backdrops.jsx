@@ -5,7 +5,9 @@ import {useMotionValueEvent, useScroll} from "framer-motion";
 import {useState} from "react";
 
 export default function Backdrop(){
-  
+
+  // TODO: Create logic to adjust timing, idealy shorter the site the slower the animations should be.
+
   const { scrollYProgress } = useScroll();
   const [current, setCurrent] = useState(0);
   useMotionValueEvent(scrollYProgress, "change", (latest) => {

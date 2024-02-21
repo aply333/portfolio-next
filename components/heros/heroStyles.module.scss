@@ -1,0 +1,11 @@
+@use '../global-styles/extensions';
+
+.hero_card{
+  @extend .backdrop-blur;
+  h1{
+    margin-bottom: 2rem;
+  }
+  &__content{
+    margin-bottom: 2rem
+  }
+}

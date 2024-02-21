@@ -1,0 +1,13 @@
+.base_input{
+  font-size: 1.4rem;
+  padding: 5px 10px;
+  height: min-content;
+  border: 1px solid var(--color-core);
+  border-radius: var(--rad-small);
+}
+.text_area{
+  @extend .base_input;
+  min-height: 150px;
+  max-height: 500px;
+  height: auto;
+}
