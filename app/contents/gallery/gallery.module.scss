@@ -59,14 +59,32 @@
       cursor: pointer;
 
       &:hover, &:focus{
-        background: red;
-
         svg{
           fill: var(--color-accent);
         }
       }
     }
 
+  }
+  button{
+    display: grid;
+    place-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    svg{
+      width: 2.4rem;
+      display: block;
+      fill: var(--color-white);
+      transition: var(--time-base);
+    }
+    
+    &:hover, &:focus{
+      svg{
+        fill: var(--color-accent);
+      }
+    }
   }
 }
 
@@ -77,6 +95,8 @@
   background-color: var(--color-white);
   border-radius: 8px;
   height: 100%;
+  transition: var(--time-mid);
+
   // * Card Title:
   h3{
     @extend .title--4;
