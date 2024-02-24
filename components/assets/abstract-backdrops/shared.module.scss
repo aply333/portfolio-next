@@ -20,7 +20,7 @@
   width: 160vh;
   min-height: 15%;
   box-shadow: var(--box-shadow);
-  transition: all ease-in-out 500ms;
+  transition: all ease-in-out 1000ms;
   position: relative;
   transform-origin: top;
   @include breakpoints.size(md){

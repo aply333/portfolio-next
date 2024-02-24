@@ -6,6 +6,7 @@ import { fetchWorkTypes, galleryBaseFetch , projectFetch} from "@/lib/api/strapi
 import styles from "./gallery.module.scss";
 import Svg from "@/components/assets/svg/svg";
 
+
 export default async function Gallery(){
   let filterData = await fetchWorkTypes();
   let baseData = await galleryBaseFetch();

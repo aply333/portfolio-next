@@ -1,24 +1,28 @@
 "use client"
-
 import { useState } from "react";
 import styles from "./contactcta.module.scss";
-import { useFormspark } from "@formspark/use-formspark";
+import { createContact } from "@/lib/api/strapiGraphContact";
 
-const FORMSPARK_FORM_ID = 'smtj4W13k';
+// TODO: REVIEW THIS AS TO FORM SPARK MAKE CHOICE AND PRUNE.
 
 function ContactCta() {
-  const [submit, submitting] = useFormspark({
-    formId: FORMSPARK_FORM_ID,
-  });
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await submit({name, email, message});
-    alert("Form submitted");
+
+
+    let submitData = {
+      sender: name,
+      email : email,
+      content: message
+    }
+
+    let sentData = await createContact(submitData);
+
+        alert("Form submitted");
   };
 
   return (
@@ -53,7 +57,7 @@ function ContactCta() {
 
 
       <div className={styles['form--block']}>
-        <button type="submit" disabled={submitting}>
+        <button type="submit">
           Send
         </button>
       </div>

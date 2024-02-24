@@ -5,11 +5,6 @@ import { useState } from "react";
 export default function FilterBar({filters, parentClass, filterSetter, current}){
   const [isHovered, setIsHovered] = useState(false);
 
-  function handleReset(e){
-    e.preventDefault();
-    filterSetter(null)
-  }
-
   return(
     <div className={parentClass}>
      <span className="title--4">Filters</span>
@@ -29,7 +24,13 @@ export default function FilterBar({filters, parentClass, filterSetter, current})
           </li>
        ))}
      </ul>
-     { current !== null ? <button onClick={handleReset} ><Svg name={"refresh"}/></button> : null }
+     { current !== null ? <button
+        onClick={ e => {
+           e.preventDefault();
+           filterSetter('reset');
+          }} >
+       <Svg name={"refresh"}/>
+     </button> : null }
   </div>
   )
 }

@@ -79,7 +79,7 @@
       fill: var(--color-white);
       transition: var(--time-base);
     }
-    
+
     &:hover, &:focus{
       svg{
         fill: var(--color-accent);
@@ -91,6 +91,7 @@
 
 .card{
   grid-column: span 4;
+  grid-row: span 2;
   padding: 20px;
   background-color: var(--color-white);
   border-radius: 8px;

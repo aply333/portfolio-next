@@ -7,7 +7,6 @@ import styles from "./gallery.module.scss";
 import { projectFetch } from "@/lib/api/strapiGraph";
 import { useEffect, useState } from "react";
 
-
 export default function GalleryClient({filters, base}){
   const [curData, setCurData] = useState();
   const [curFilters, setCurFilters] = useState();
@@ -26,6 +25,8 @@ export default function GalleryClient({filters, base}){
 
     fetchData();
   }, [curFilters])
+
+
 
   return(
     <div className={`section--with-grid ${styles.gallery}`}>
