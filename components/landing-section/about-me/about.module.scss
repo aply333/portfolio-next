@@ -2,8 +2,12 @@
 @use "../../global-styles/extensions";
 
 .about{ align-items: center; }
-.content{ grid-column: 1/-1; }
-.text{ @extend .backdrop-blur; }
+.content{
+  grid-column: 1/-1;
+  display: flex;
+  flex-flow: column;
+}
+// .text{ @extend .backdrop-blur; }
 .image{
   &__wrapper{
     position: relative;
@@ -20,7 +24,7 @@
       height: auto;
       margin: 0;
     }
-    @include breakpoints.size(lg){ grid-column: 3/8; }
+    @include breakpoints.size(lg){ grid-column: 1/7; }
   }
   display: block;
   object-fit: cover;
@@ -31,5 +35,5 @@
   .content{ grid-column: 6/11; }
 }
 @include breakpoints.size(lg){
-  .content{ grid-column: 9/15; }
+  .content{ grid-column: 7/16; }
 }

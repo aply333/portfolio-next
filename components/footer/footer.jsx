@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer(){
   return(
     <footer className={styles.footer}>
-      <div className="container">
+      {/* <div className="container">
         <div className={styles.footer__content+' just-grid'}>
           <nav className={styles.footer__nav}>
             <h4 className={styles.footer__nav__title}>About</h4>
@@ -18,7 +18,7 @@ export default function Footer(){
             <h4 className={styles.footer__nav__title}>Resources</h4>
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   )
 }

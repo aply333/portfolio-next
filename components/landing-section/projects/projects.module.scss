@@ -11,6 +11,7 @@
   @include breakpoints.size(md){
     padding-top: 0;
     grid-template-columns: repeat(10, minmax(0, 1fr) );
+    align-items: center;
   }
 }
 
@@ -126,9 +127,26 @@
   padding: 20px;
   z-index: var(--level-top-2);
   height: min-content;
-  background-color: var(--color-white);
-  color: var(--color-darkest);
+  @extend .backdrop-blur;
   @include breakpoints.size(md){ grid-column: 4/8; }
+  @include breakpoints.size(lg){
+    grid-column: 2/10;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+  }
+
+  &__external_links{
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    li{
+      border-right: none !important;
+    }
+  }
 
   &__top_row{
     display: flex;
@@ -136,32 +154,40 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+    width: 100%;
     button{
       border: none;
       width: 45px;
       height: 45px;
       display: grid;
       place-content: center;
-      background-color: var(--color-core);
+      background-color: var(--color-darkest);
       border-radius: var(--rad-small);
       cursor: pointer;
       transition: var(--time-base);
       outline-offset: 3px;
       outline: 2px solid transparent;
       svg{ fill: var(--color-white); }
-      &:hover, &:focus{ background-color: var(--color-dark); }
+      &:hover, &:focus{
+        background-color: var(--color-accent);
+        svg{ fill: var(--color-darkest); }
+      }
       &:focus-visible{
         outline-offset: 3px;
         outline: 2px solid var(--color-dark);
       }
     }
   }
+  &__left_section{
+    @include breakpoints.size(lg){
+      width: 35%;
+    }
+  }
   &__image{
-    object-position: top;
+    object-position: left;
     object-fit: cover;
     display: block;
     border-radius: var(--rad-hard);
-
     &_wrapper{
       position: relative;
       height: 160px;
@@ -171,14 +197,36 @@
       padding-top: 2rem;
       box-shadow: var(--box-shadow);
       @include breakpoints.size(md){ height: 260px; }
+      @include breakpoints.size(lg){ height: 340px; }
     }
   }
-  &__content{ padding: 10px; }
+  &__content{
+    @include breakpoints.size(lg){ width: 60%; }
+  }
 }
+
 .list{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   margin-bottom: 2rem;
-  li{ margin-right: 1rem; }
+  font-weight: 600;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  li{
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+  }
 }
+
+// .backdrop{
+//   width: 100vw;
+//   height: 100vh;
+//   background: grey;
+//
+//   position: absolute;
+//   left: -50%;
+//   top:-50%;
+//   transform: translate(50%, 50%);
+// }

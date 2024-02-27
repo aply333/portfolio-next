@@ -2,7 +2,10 @@ import Backdrop from "@/components/assets/abstract-backdrops/backdrops";
 import GalleryClient from "./gallery-client";
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
-import { fetchWorkTypes, galleryBaseFetch , projectFetch} from "@/lib/api/strapiGraph";
+import { fetchWorkTypes,
+         galleryBaseFetch,
+         projectFetch
+       } from "@/lib/api/strapiGraph";
 import styles from "./gallery.module.scss";
 import Svg from "@/components/assets/svg/svg";
 

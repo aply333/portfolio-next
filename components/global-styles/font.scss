@@ -49,6 +49,8 @@ ul{
   position: relative;
   border-radius: var(--rad-small);
   outline: 1px solid transparent;
+  font-weight: 500;
+
   &::after{
     content: '';
     position: absolute;
@@ -61,7 +63,8 @@ ul{
     transition: var(--time-mid);
   }
   &:hover, &:focus{
-    font-weight: 500;
+
+    font-weight: 700;
     &::after{
       width: 85%;
       background-color: var(--color-alt1-accent);
