@@ -4,8 +4,8 @@
 .heading-text{
   grid-column: 1/-1;
   margin-bottom: 20px;
-
 }
+
 .subheading{ margin-bottom: 20px; }
 .headshot{
   grid-column: 2/7;
@@ -19,7 +19,8 @@
 }
 
 .intro_wrapper{
-  margin-top: 90px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   height: calc( 100vh - 90px );
   display: grid;
   place-content: center;
@@ -33,7 +34,6 @@
   position: relative;
   height: min-content;
   align-items: center;
-  @extend .backdrop-blur;
   border: none;
 }
 
@@ -42,6 +42,10 @@
     align-items: center;
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+  .intro_wrapper{
+    margin-top: 90px;
+    margin-bottom: auto;
   }
   .heading-text{ grid-column: 2/6; }
   .headshot{ grid-column: 7/10; }
