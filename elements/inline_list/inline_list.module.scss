@@ -1,0 +1,25 @@
+.inline_list{
+	h2{
+		font-weight: 400;
+		font-size: 2.4rem;
+		margin-bottom: 1rem;
+		color: var(--color-accent);
+	}
+	ul{
+		display: flex;
+		flex-flow: row wrap;
+		li{
+			font-size: 1.6rem;
+			color: var(--color-grey-lightest);
+			&:after{
+				content: ",";
+				margin-right: 1rem;
+			}
+			&:last-of-type{
+				&:after{
+					display: none;
+				}
+			}
+		}
+	}
+}
