@@ -1,0 +1,64 @@
+@use "../components/global-styles/breakpoints";
+.quick_links{
+	grid-row: 2;
+	grid-column: span 6;
+}
+.banner{
+	grid-column: span 6;
+}
+.key_values{
+	display: none;
+}
+.content_pane{
+	grid-column: span 6;
+}
+
+
+@include breakpoints.size(md){
+	.landing-page{
+		grid-template-rows: 400px 1fr;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	.banner{
+		grid-column: 2/10;
+	}
+
+	.content_pane{
+		grid-column: 6/11;
+		grid-row: 2;
+		max-height: 100vh;
+		overflow-y: scroll;
+
+		-ms-overflow-style: none;
+	  	scrollbar-width: none;
+	  	&::-webkit-scrollbar{
+	  		display: none;
+	  	}
+	}
+
+	.quick_links{
+		grid-column: 1;
+		grid-row: auto;
+	}
+
+	.key_values{
+		grid-column: 2/6;
+		display: block;
+	}
+}
+
+
+
+@include breakpoints.size(lg){
+	.banner{
+		grid-column: span 5;
+	}
+	.content_pane{
+		grid-column: 7/17;
+		grid-row: span 2;
+		max-height: 100vh;
+	}
+}
+

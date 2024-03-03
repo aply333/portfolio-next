@@ -26,3 +26,12 @@
   box-shadow: var(--box-shadow);
   padding: 20px;
 }
+
+
+.btn{
+  background-color: var(--color-darkest);
+  border: none;
+  color: var(--color-accent);
+  border-radius: var(--rad-small);
+  padding: 6px 20px;
+}

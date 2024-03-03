@@ -1,0 +1,29 @@
+@use '../global-styles/breakpoints';
+
+.content_pane{
+	padding-top: 60px;
+	padding-right: 20px;
+	display: flex;
+	flex-flow: column;
+	align-items: flex-end;
+	@include breakpoints.size(md){
+		padding-top: 0;
+	}
+	@include breakpoints.size(lg){
+		padding-top: 120px;
+	}
+	h2{
+		font-weight: 300;
+		color: var(--color-lightest-grey);
+		margin-bottom: 27px;
+	}
+
+}
+
+
+@include breakpoints.size(lg){
+	.bound{
+		max-width: 500px;
+
+	}
+}

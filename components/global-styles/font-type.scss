@@ -19,5 +19,42 @@
 
 .basic {
   font-size: 1.4rem;
-  line-height: 120%;
+  line-height: 130%;
+}
+
+.decorative-link{
+  @extend .basic;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--time-mid);
+  transition-timing-function: cubic-bezier(1,.04,.62,.36);
+  position: relative;
+  border-radius: var(--rad-small);
+  outline: 1px solid transparent;
+  font-weight: 500;
+
+  &::after{
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    height: 3px;
+    border-radius: var(--rad-small);
+    width: 30%;
+    left: 0;
+    bottom: -3px;
+    transition: var(--time-mid);
+  }
+  &:hover, &:focus{
+    color: var(--color-accent);
+    font-weight: 700;
+    &::after{
+      width: 85%;
+      background-color: var(--color-accent);
+    }
+  }
+
+  &:focus-visible{
+    outline-offset: 6px;
+    outline: 2px solid var(--color-accent);
+  }
 }

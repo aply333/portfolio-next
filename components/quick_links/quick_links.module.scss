@@ -1,0 +1,26 @@
+@use "../global-styles/breakpoints.scss";
+
+.quick_links{
+	display: flex;
+	justify-content: space-evenly;
+	@include breakpoints.size(md){
+	 flex-flow: column;
+	 justify-content: flex-start;
+	}
+	svg{
+		fill: var(--color-white);
+		transition: var(--time-base);
+		width: 3rem;
+	}
+
+	a{
+		margin-bottom: 20px;
+		display: block;
+		&:hover, &:focus{
+			svg{
+				fill: var(--color-accent);
+			}
+		}
+	}
+
+}
