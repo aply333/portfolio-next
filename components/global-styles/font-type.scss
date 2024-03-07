@@ -1,48 +1,30 @@
-@use "./font-type.scss";
-
-h1{
-  @extend .title--1;
+.title--1 {
+  font-size: 4.2rem;
+  line-height: 110%;
 }
-h2{
-  @extend .title--2;
-}
-.section-title{
-  @extend .title--2;
-  margin-bottom: 2rem;
+.title--2 {
+  font-size: 2.8rem;
+  line-height: 110%;
 }
 
-h3{
-  @extend .title--3;
-}
-h4{
-  @extend .title--4;
+.title--3 {
+  font-size: 2.4rem;
+  line-height: 110%;
 }
 
-p{
-  @extend .basic;
+.title--4 {
+  font-size: 2.2rem;
+  line-height: 110%;
 }
 
-.paragraph-gap{
-  display: inline-block;
-  margin-bottom: 1.4rem;
+.basic {
+  font-size: 1.4rem;
+  line-height: 130%;
 }
 
-ul{
-  li{ @extend .basic;}
-}
-
-.markdown-wys{
-  p{ @extend .paragraph-gap; }
-}
-
-.form-label{
-  @extend .basic;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
 .decorative-link{
   @extend .basic;
-  color: var(--color-alt1-accent);
+  color: var(--color-accent);
   text-decoration: none;
   transition: var(--time-mid);
   transition-timing-function: cubic-bezier(1,.04,.62,.36);
@@ -63,11 +45,11 @@ ul{
     transition: var(--time-mid);
   }
   &:hover, &:focus{
-
+    color: var(--color-accent);
     font-weight: 700;
     &::after{
       width: 85%;
-      background-color: var(--color-alt1-accent);
+      background-color: var(--color-accent);
     }
   }
 

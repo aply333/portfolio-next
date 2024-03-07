@@ -1,0 +1,113 @@
+@use "../global-styles/form";
+@use "../global-styles/extensions";
+@use "../global-styles/font-type";
+@use "../global-styles/breakpoints";
+
+.contact_pane{
+	@extend .backdrop-blur;
+	padding: 20px;
+	h3{
+		margin-bottom: 1rem;
+		span{
+			color: var(--color-accent);
+		}
+	}
+
+
+	form{
+		width: 100%;
+		display: flex;
+		flex-flow: column;
+
+		input{
+			@extend .base_input;
+			margin-bottom: 2rem;
+			width: 100%;
+		}
+		textarea{
+			@extend .text_area;
+		}
+		button{
+			@extend .btn;
+			font-size: 1.6rem;
+			font-weight:  600;
+			display: block;
+			width: min-content;
+
+		}
+		.info_section{
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: flex-end;
+			button{
+				display: none;
+				border: 2px solid var(--color-accent);
+				transition: var(--time-base);
+				cursor: pointer;
+				&:hover, &:focus{
+					background-color: var(--color-accent);
+					border-color: var(--color-darker);
+					color: var(--color-darker);
+				}
+				@include breakpoints.size(lg){
+					display: block;
+				}
+			}
+		}
+		.mobile_btn{
+			margin-top: 2rem;
+			height: 4.5rem;
+			align-self: flex-end;
+		}
+	}
+
+	@include breakpoints.size(lg){
+		padding:  60px;
+		form{
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			div{
+				flex-basis: 35%;
+			}
+			textarea{
+				flex-basis: 60%
+			}
+		}
+		.mobile_btn{
+			display: none;
+		}
+	}
+
+}
+
+.content{
+	margin-bottom: 40px;
+	display: flex;
+	flex-flow: column;
+	div{
+		flex-basis: 60%;
+		margin-right: 20px;
+		font-size: 1.6rem;
+		font-weight: 300;
+		color: var(--color-grey-lightest);
+	}
+	address{
+		display: flex;
+		flex-flow: column nowrap;
+		span{
+			color: var(--color-accent);
+			font-size: 1.6rem;
+			font-style: normal;
+			margin-bottom: 2rem;
+			a{
+				font-weight: 300;
+				color: var(--color-white);
+				@extend .decorative-link;
+				
+			}
+		}
+	}
+	@include breakpoints.size(lg){
+		flex-flow: row;
+	}
+}

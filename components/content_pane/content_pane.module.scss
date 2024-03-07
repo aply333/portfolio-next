@@ -1,0 +1,30 @@
+@use '../global-styles/breakpoints';
+
+.content_pane{
+	padding-top: 60px;
+	display: flex;
+	flex-flow: column;
+	align-items: flex-end;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	@include breakpoints.size(md){
+		padding-top: 0;
+	}
+	@include breakpoints.size(lg){
+		padding-top: 120px;
+	}
+	h2{
+		font-weight: 300;
+		color: var(--color-lightest-grey);
+		margin-bottom: 27px;
+	}
+
+}
+
+
+@include breakpoints.size(lg){
+	.bound{
+		max-width: 500px;
+
+	}
+}

@@ -1,0 +1,22 @@
+@use '../global-styles/breakpoints';
+
+
+.basic_text{
+	margin-bottom: 40px;
+}
+
+.image_card{
+	margin-bottom: 27px;
+}
+
+.mobile_values .key_values{
+	display: block;
+}
+
+.content_pane{
+	@include breakpoints.size(md){
+		.mobile_values .key_values{
+			display: none;
+		}
+	}
+}

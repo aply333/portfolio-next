@@ -1,7 +1,8 @@
-import { Noto_Sans_Mono} from 'next/font/google'
+import { Noto_Sans_Mono} from 'next/font/google';
 import '../components/global-styles/best.scss';
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 
 const sans = Noto_Sans_Mono({ subsets: ['latin'] })
 

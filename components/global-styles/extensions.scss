@@ -20,9 +20,18 @@
 }
 
 .backdrop-blur{
-  background-color: var(--transparent-dark);
+  background-color: var(--transparent-darker);
   backdrop-filter: blur(8px) ;
   border-radius: var(--rad-hard);
   box-shadow: var(--box-shadow);
   padding: 20px;
+}
+
+
+.btn{
+  background-color: var(--color-darkest);
+  border: none;
+  color: var(--color-accent);
+  border-radius: var(--rad-small);
+  padding: 6px 20px;
 }

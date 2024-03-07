@@ -9,4 +9,9 @@ html {
   font-size: 10px;
   color: var(--color-white);
   scroll-behavior: smooth;
+
+  background: #061D39;
+  background: radial-gradient(circle farthest-corner at top left, #061D39 40%, #093E7B 100%);
+  background-repeat: no-repeat;
+  background-size: 100vw 100%;
 }
