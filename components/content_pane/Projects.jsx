@@ -20,7 +20,7 @@ export default function Projects({projects}){
 
 	return(
 		<div>
-			{ projects.map( project => ( <Card project={project} /> ))}
+			{ projects.map( project => ( <Card key={Math.random()} project={project} /> ))}
 		</div>
 	)
 }
