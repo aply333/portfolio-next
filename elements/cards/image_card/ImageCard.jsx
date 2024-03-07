@@ -12,9 +12,20 @@ export default function ImageCard({data}){
 	const [active, setActive] = useState(false)
 	const [ cardState, setCardState ] = useState({});
 	const states = {
-		focused: {
-			height: 350
+		focused:{
+			card: {height: 350},
+			link: {
+				height: 18,
+				opacity: 1
+			}
 		},
+		unfocused: {
+			card: {},
+			link: {
+				height: 0,
+				opacity: 0,
+			}
+		}
 	}
 
 	const timing = {
@@ -27,7 +38,7 @@ export default function ImageCard({data}){
 		setActive(true)
 	}
 	let handleLeave = () => {
-		setCardState({})
+		setCardState(states.unfocused)
 		setActive(false)
 	}
 
@@ -35,12 +46,15 @@ export default function ImageCard({data}){
 		<div
 			onMouseEnter={handleOver}
 			onMouseLeave={handleLeave}
+
+			onFocus={handleOver}
+			onBlur={handleLeave}
 		>
-		<motion.button
+		<motion.div
 			ref={cardRef} 
 			className={"image_card "+styles.image_card}
 
-			animate={cardState}
+			animate={cardState.card}
 			transition={timing}
 			>
 			<div className={styles.image_card__wrapper}>
@@ -49,14 +63,20 @@ export default function ImageCard({data}){
 					   aria-hidden={true}
 					   fill
 					   />
-		    <span> <h3>{data.title}</h3> </span>	
+		    <div className={styles.image_card__title}>
+		    	<h3>{data.title}</h3>
+			  </div>
+
+			  <motion.span animate={cardState.link}>
+			    <a href="#" target="_blank">Live Site</a>
+			    <a href="#" target="_blank">View Code</a>
+			  </motion.span>
+
  	    </div>
 
-		</motion.button>
- 	    { active 
-				? <motion.div> <button> Test </button> </motion.div>
-				: null
- 	  	}
+		</motion.div>
+
 		</div>
 	);
 }
+
