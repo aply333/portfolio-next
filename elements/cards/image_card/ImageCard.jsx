@@ -68,8 +68,9 @@ export default function ImageCard({data}){
 			  </div>
 
 			  <motion.span animate={cardState.link}>
-			    <a href="#" target="_blank">Live Site</a>
-			    <a href="#" target="_blank">View Code</a>
+			    { data.live ? <a href={data.live} target="_blank">Live Site</a> : null}
+			    { data.codebase ? <a href={data.codebase} target="_blank">The Code</a> : null}
+		
 			  </motion.span>
 
  	    </div>

@@ -4,13 +4,10 @@
 .image_card{
 	height: 200px;
 	box-shadow: var(--box-shadow);
-	// transition: var(--time-mid);
 	display: flex;
-
 	width: 100%;
 	background: none;
 	border: none;
-
 
 	&__wrapper{
 		position: relative;

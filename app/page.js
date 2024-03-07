@@ -9,6 +9,8 @@ import "./page.scss";
 export default async function Home() {
   let landing_data = await landingGraphFetch();
 
+  // console.log(landing_data.Contact);
+
   return (
     <>
       <main className='container'>
@@ -17,6 +19,8 @@ export default async function Home() {
           <ContentPane 
             about = {landing_data.About.Content}
             projects = {landing_data.Gallery.Projects.data}
+            contact = {landing_data.Contact}
+            values = {landing_data.Stack.Stacks.data}
           />
           <QuickLinks/>
           <KeyValues data={landing_data.Stack.Stacks.data}/>
