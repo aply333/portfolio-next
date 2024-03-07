@@ -41,6 +41,14 @@
 			align-items: flex-end;
 			button{
 				display: none;
+				border: 2px solid var(--color-accent);
+				transition: var(--time-base);
+				cursor: pointer;
+				&:hover, &:focus{
+					background-color: var(--color-accent);
+					border-color: var(--color-darker);
+					color: var(--color-darker);
+				}
 				@include breakpoints.size(lg){
 					display: block;
 				}
@@ -77,14 +85,11 @@
 	display: flex;
 	flex-flow: column;
 	div{
-		flex-basis: 50%;
-		margin-right: 45px;
-		p{
-			margin-bottom: 2rem;
-			font-size: 1.6rem;
-			font-weight: 300;
-			color: var(--color-grey-lightest);
-		}
+		flex-basis: 60%;
+		margin-right: 20px;
+		font-size: 1.6rem;
+		font-weight: 300;
+		color: var(--color-grey-lightest);
 	}
 	address{
 		display: flex;

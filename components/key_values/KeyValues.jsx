@@ -16,12 +16,7 @@ export default function KeyValues({data}){
 		if(item.attributes.Type === "Tool"){
 			tools.push(item.attributes.Tech)
 		}
-	})
-	// console.log(tools)
-	// console.log(frameworks)
-	// console.log(stack)
-
-	// console.log(data)
+	});
 
 	return(
 		<section className={"key_values "+styles.key_values}>
