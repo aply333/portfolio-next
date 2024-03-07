@@ -27,7 +27,7 @@ export default function ContactPane({data}){
 
 	return(
 		<div className={"contact_pane "+styles.contact_pane}>
-			<h3>Let<span>'</span>s Talk</h3>
+			<h3>Let<span>&apos;</span>s Talk</h3>
 			<div className={styles.content}>
 			
 				<div>
